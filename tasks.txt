@@ -1,0 +1,3 @@
+clean
+go shopping
+clean the code
