@@ -1,4 +1,1 @@
-clean
-throw
- out trash
-dishes
+Magic
