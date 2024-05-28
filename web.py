@@ -14,8 +14,13 @@ st.title("My To-do List App")
 st.write("This app is made to increase your productivity")
 
 
-for task in tasks:
-    st.checkbox(task)
+for index, task in enumerate(tasks):
+    checkbox = st.checkbox(task, key=task)
+    if checkbox:
+        tasks.pop(index)
+        functions.write_tasks(tasks)
+        del st.session_state[task]
+        st.rerun()
 
 st.text_input(label="XX", label_visibility='hidden',
               placeholder="Enter tasks here...",
