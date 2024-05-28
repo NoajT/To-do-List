@@ -1,4 +1,4 @@
-FILEPATH = '/Users/Noaj-T/Desktop/To-do-list-app1/tasks.txt'
+FILEPATH = 'tasks.txt'
 
 
 def get_tasks(filepath=FILEPATH):

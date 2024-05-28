@@ -1,8 +1,15 @@
 import functions
 import FreeSimpleGUI as fSg
 import time
+import os
+
+
 
 fSg.theme("DarkBlue14")
+
+if not os.path.exists('tasks.txt'):
+    with open("tasks.txt", "w") as file:
+        pass
 
 clock = fSg.Text('', key="Clock")
 label = fSg.Text("Type in a To-Do: ")
@@ -31,6 +38,7 @@ while True:
             tasks.append(new_task)
             functions.write_tasks(tasks)
             window['tasks'].update(values=tasks)
+            window['task'].update(value='')
 
         case "Edit":
             try:
